@@ -1,0 +1,26 @@
+Warning Window,Model,Recall_Mean,Recall_Std,F1_Mean,F1_Std,AUC_Mean,AUC_Std
+July,Decision Tree,0.333,0.289,0.178,0.168,0.617,0.116
+July,KNN,0.0,0.0,0.0,0.0,0.419,0.014
+July,Logistic Regression,0.5,0.5,0.172,0.183,0.766,0.199
+July,Naive Bayes,0.167,0.289,0.056,0.096,0.514,0.304
+July,SVM,0.0,0.0,0.0,0.0,0.437,0.25
+June,Decision Tree,0.333,0.289,0.156,0.145,0.599,0.124
+June,KNN,0.0,0.0,0.0,0.0,0.396,0.016
+June,Logistic Regression,0.667,0.577,0.274,0.286,0.707,0.237
+June,Naive Bayes,0.167,0.289,0.042,0.072,0.459,0.286
+June,SVM,0.0,0.0,0.0,0.0,0.266,0.113
+March,Decision Tree,0.0,0.0,0.0,0.0,0.378,0.095
+March,KNN,0.0,0.0,0.0,0.0,0.459,0.177
+March,Logistic Regression,0.333,0.289,0.07,0.061,0.383,0.205
+March,Naive Bayes,0.5,0.5,0.068,0.067,0.333,0.171
+March,SVM,0.167,0.289,0.083,0.144,0.477,0.193
+May,Decision Tree,0.0,0.0,0.0,0.0,0.306,0.051
+May,KNN,0.0,0.0,0.0,0.0,0.369,0.031
+May,Logistic Regression,0.0,0.0,0.0,0.0,0.243,0.102
+May,Naive Bayes,0.167,0.289,0.025,0.043,0.27,0.153
+May,SVM,0.0,0.0,0.0,0.0,0.099,0.061
+September,Decision Tree,0.167,0.289,0.067,0.115,0.52,0.122
+September,KNN,0.0,0.0,0.0,0.0,0.493,0.094
+September,Logistic Regression,0.333,0.289,0.118,0.105,0.752,0.197
+September,Naive Bayes,0.167,0.289,0.083,0.144,0.545,0.195
+September,SVM,0.0,0.0,0.0,0.0,0.608,0.141
