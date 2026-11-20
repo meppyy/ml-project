@@ -1,0 +1,19 @@
+Month,Year Group,Count,Mean,Median,Std,Minimum,Maximum
+JAN,Documented major flood,6,7.37,4.15,7.42,0.5,19.3
+JAN,Not listed,111,12.43,6.4,15.72,0.0,83.5
+FEB,Documented major flood,6,16.68,12.45,16.31,0.9,40.1
+FEB,Not listed,111,15.3,8.4,16.19,0.0,79.0
+MAR,Documented major flood,6,32.1,30.65,29.02,0.1,66.6
+MAR,Not listed,111,37.4,28.3,30.64,0.9,217.2
+APR,Documented major flood,6,95.17,102.55,41.35,43.0,138.5
+APR,Not listed,111,110.19,108.4,45.41,13.1,238.0
+MAY,Documented major flood,6,261.63,205.55,140.13,119.3,500.5
+MAY,Not listed,111,228.27,180.6,148.84,53.4,738.8
+JUN,Documented major flood,6,883.02,912.25,155.71,705.9,1042.7
+JUN,Not listed,111,640.74,617.0,180.09,196.8,1098.2
+JUL,Documented major flood,6,976.67,898.25,323.0,622.7,1526.5
+JUL,Not listed,111,680.81,677.8,211.81,167.5,1308.9
+AUG,Documented major flood,6,532.7,517.3,108.27,369.7,678.3
+AUG,Not listed,111,414.64,380.7,159.75,178.6,1199.2
+SEP,Documented major flood,6,319.55,308.05,145.04,86.1,526.7
+SEP,Not listed,111,241.88,222.7,121.47,41.3,517.6
