@@ -76,6 +76,14 @@ The EDA examines:
 - Monthly rainfall variability.
 - Correlations between monthly rainfall variables.
 - Rainfall differences between documented flood years and other years.
+- Month-wise rainfall comparison between documented flood years and other years.
+- Individual rainfall profiles of the six documented flood years.
+- Empirical rainfall percentile analysis.
+- Comparison of monthly rainfall distributions across prediction groups.
+
+Additional analysis examines individual flood years and highlights variations in their monthly rainfall profiles. Four of the six documented flood years rank above the 90th percentile of JJAS rainfall.
+
+The monthly group comparison shows higher average rainfall during June and July in documented flood years. However, the distributions overlap, and the findings are descriptive rather than causal.
 
 The analysis identifies substantial seasonal variation in Kerala rainfall, with June–September contributing the largest share of annual rainfall.
 
@@ -119,43 +127,84 @@ Annual and seasonal aggregates containing information from later months are excl
 
 ## 8. Model Evaluation
 
-Models were evaluated using stratified three-fold cross-validation.
+The five classifiers were evaluated using stratified three-fold cross-validation.
 
 **Configuration:**
 - Number of folds: 3
 - Shuffle: True
 - Random state: 42
 
-**Evaluation metrics:**
+**Primary evaluation metrics:**
 - Recall
 - Precision
 - F1-score
 - ROC-AUC
+- Average Precision (PR-AUC)
 
-Pooled out-of-fold predictions are used for the main model comparison.
+Pooled out-of-fold predictions are used for aggregate classification metrics and confusion-matrix calculations.
 
-### Best Observed Results
+ROC-AUC and PR-AUC are additionally summarised using their mean and standard deviation across individual validation folds.
 
-| Metric | Model and cutoff | Score |
-|---|---|---:|
-| Recall | Logistic Regression – June | 0.667 |
-| F1-score | Logistic Regression – June | 0.296 |
-| ROC-AUC | Logistic Regression – September | 0.737 |
+### Primary Model Findings
 
-Logistic Regression using January–June rainfall achieved the best recall and F1-score among the tested combinations.
+Logistic Regression using January–June rainfall achieved:
+- Recall: 0.667
+- F1-score: 0.296
 
-These results are exploratory cross-validation estimates and are not independent test-set results.
+The fold-level evaluation also indicates:
 
-### Additional Evaluation
+- July Logistic Regression achieved a mean ROC-AUC of approximately 0.766 (standard deviation 0.199).
+- September Logistic Regression achieved a mean PR-AUC of approximately 0.339 (standard deviation 0.255).
+
+The results vary across validation folds and should be interpreted cautiously due to the small number of documented flood observations.
+
+### Class-Imbalance Experiments
+
+Three approaches were compared:
+
+1. Dummy Classifier
+2. Class-Weighted Logistic Regression
+3. RandomOverSampler Logistic Regression
+
+The comparison includes pooled classification metrics and fold-level performance summaries.
+
+Neither class weighting nor random oversampling consistently outperformed the other across all prediction cutoffs.
+
+### Threshold Sensitivity Analysis
+
+Five predefined thresholds were examined:
+
+0.25, 0.35, 0.50, 0.65 and 0.75.
+
+The analysis evaluates recall, precision and F1-score for class-weighted and oversampled Logistic Regression.
+
+Fold-level means and standard deviations are reported to illustrate variation across validation folds.
+
+These experiments represent threshold sensitivity comparisons, not independently validated optimal operating thresholds.
+
+### Time-Ordered Validation
+
+A supplementary expanding-window evaluation was conducted using three chronological validation folds.
+
+The experiment compares a Dummy Classifier, Class-Weighted Logistic Regression and RandomOverSampler Logistic Regression.
+
+The validation period contains 87 observations and five documented flood years.
+
+Classification metrics are aggregated across validation predictions, while ROC-AUC and PR-AUC are calculated separately within each validation fold.
+
+This provides an additional temporal evaluation, although the limited number of positive validation observations creates substantial uncertainty.
+
+### Additional Analysis
 
 The project also includes:
 
 - Individual rainfall-feature ROC-AUC comparisons.
-- Fold-level confusion counts and evaluation metrics.
-- Fold-level mean and standard deviation summaries.
-- A 95% Wilson confidence interval for the June Logistic Regression recall.
+- Fold-level confusion matrices and metric summaries.
+- A 95% Wilson confidence interval for June Logistic Regression recall.
+- Precision-recall and ROC visualisations.
+- Threshold sensitivity visualisations.
 
-The rainfall-only baseline analysis uses all 117 observations and is descriptive, not an independent predictive evaluation.
+All findings remain exploratory historical classification results.
 
 ## 9. Project Structure
 
@@ -168,12 +217,20 @@ ml-project/
 │   │   └── flood_year_evidence.csv
 │   │
 │   └── processed/
-│       ├── kerala_flood_labeled.csv
-│       ├── model_comparison_results.csv
-│       ├── oof_predictions.csv
-│       ├── fold_level_metrics.csv
-│       ├── fold_variability_summary.csv
-│       └── rainfall_only_baseline_auc.csv
+│       ├── feature_cutoff_validation.csv
+│       ├── individual_flood_year_profile.csv
+│       ├── monthly_flood_rainfall_summary.csv
+│       ├── monthly_flood_mean_comparison.csv
+│       ├── primary_model_evaluation_summary.csv
+│       ├── supplementary_fold_metrics.csv
+│       ├── supplementary_fold_summary.csv
+│       ├── threshold_fold_metrics.csv
+│       ├── threshold_fold_summary.csv
+│       ├── threshold_sensitivity_analysis.csv
+│       ├── time_ordered_validation_results.csv
+│       ├── time_ordered_fold_metrics.csv
+│       ├── time_ordered_fold_summary.csv
+│       └── time_ordered_oof_predictions.csv
 │
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
@@ -189,6 +246,9 @@ ml-project/
 │       ├── monthly_boxplot.png
 │       ├── rainfall_correlation.png
 │       ├── flood_vs_nonflood_rainfall.png
+│       ├── monthly_flood_vs_nonflood_rainfall.png
+│       ├── threshold_sensitivity_fold_f1.png
+│       ├── june_precision_recall_curves.png
 │       ├── f1_comparison.png
 │       ├── logistic_cutoff_metrics.png
 │       ├── june_roc_curves.png
@@ -249,6 +309,9 @@ The notebooks generate the processed datasets, evaluation results and visualisat
 - Fold-level metrics are sensitive to individual flood-year observations.
 - State-level monthly rainfall aggregates cannot capture all local hydrological and meteorological factors.
 - The study does not establish operational flood-warning capability.
+- Fold-level evaluation metrics exhibit substantial variability.
+- Threshold sensitivity experiments do not establish an independently validated optimal classification threshold.
+- Chronological validation contains only five positive validation observations.
 
 Results should therefore be interpreted as exploratory historical classification findings.
 
