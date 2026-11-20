@@ -1,0 +1,46 @@
+Warning Window,Approach,Fold,Validation Observations,Positive Years,Recall,Precision,F1 Score,ROC-AUC,PR-AUC (Average Precision)
+July,Class-Weighted Logistic Regression,1,29,1,0.0,0.0,0.0,0.6071428571428572,0.08333333333333333
+July,Class-Weighted Logistic Regression,2,29,1,1.0,0.3333333333333333,0.5,0.9285714285714286,0.3333333333333333
+July,Class-Weighted Logistic Regression,3,29,3,0.0,0.0,0.0,0.717948717948718,0.23739495798319327
+July,Dummy Classifier,1,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+July,Dummy Classifier,2,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+July,Dummy Classifier,3,29,3,0.0,0.0,0.0,0.5,0.10344827586206896
+July,RandomOverSampler Logistic Regression,1,29,1,0.0,0.0,0.0,0.6071428571428572,0.08333333333333333
+July,RandomOverSampler Logistic Regression,2,29,1,1.0,0.3333333333333333,0.5,0.9285714285714286,0.3333333333333333
+July,RandomOverSampler Logistic Regression,3,29,3,0.0,0.0,0.0,0.641025641025641,0.19657097288676234
+June,Class-Weighted Logistic Regression,1,29,1,0.0,0.0,0.0,0.7142857142857143,0.1111111111111111
+June,Class-Weighted Logistic Regression,2,29,1,0.0,0.0,0.0,0.8571428571428572,0.2
+June,Class-Weighted Logistic Regression,3,29,3,0.3333333333333333,0.2,0.25,0.641025641025641,0.21805555555555556
+June,Dummy Classifier,1,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+June,Dummy Classifier,2,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+June,Dummy Classifier,3,29,3,0.0,0.0,0.0,0.5,0.10344827586206896
+June,RandomOverSampler Logistic Regression,1,29,1,0.0,0.0,0.0,0.7142857142857143,0.1111111111111111
+June,RandomOverSampler Logistic Regression,2,29,1,0.0,0.0,0.0,0.8571428571428572,0.2
+June,RandomOverSampler Logistic Regression,3,29,3,0.3333333333333333,0.2,0.25,0.5897435897435898,0.18055555555555555
+March,Class-Weighted Logistic Regression,1,29,1,0.0,0.0,0.0,0.7857142857142857,0.14285714285714285
+March,Class-Weighted Logistic Regression,2,29,1,0.0,0.0,0.0,0.0357142857142857,0.03571428571428571
+March,Class-Weighted Logistic Regression,3,29,3,0.3333333333333333,0.1111111111111111,0.16666666666666666,0.32051282051282043,0.17028522775649213
+March,Dummy Classifier,1,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+March,Dummy Classifier,2,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+March,Dummy Classifier,3,29,3,0.0,0.0,0.0,0.5,0.10344827586206896
+March,RandomOverSampler Logistic Regression,1,29,1,0.0,0.0,0.0,0.75,0.125
+March,RandomOverSampler Logistic Regression,2,29,1,0.0,0.0,0.0,0.0714285714285714,0.037037037037037035
+March,RandomOverSampler Logistic Regression,3,29,3,0.3333333333333333,0.1,0.15384615384615385,0.3333333333333333,0.1712348953728264
+May,Class-Weighted Logistic Regression,1,29,1,0.0,0.0,0.0,0.7142857142857143,0.1111111111111111
+May,Class-Weighted Logistic Regression,2,29,1,0.0,0.0,0.0,0.2142857142857143,0.043478260869565216
+May,Class-Weighted Logistic Regression,3,29,3,0.0,0.0,0.0,0.2948717948717949,0.09483213575285188
+May,Dummy Classifier,1,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+May,Dummy Classifier,2,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+May,Dummy Classifier,3,29,3,0.0,0.0,0.0,0.5,0.10344827586206896
+May,RandomOverSampler Logistic Regression,1,29,1,0.0,0.0,0.0,0.7142857142857143,0.1111111111111111
+May,RandomOverSampler Logistic Regression,2,29,1,0.0,0.0,0.0,0.2142857142857143,0.043478260869565216
+May,RandomOverSampler Logistic Regression,3,29,3,0.0,0.0,0.0,0.3205128205128205,0.09817382330506574
+September,Class-Weighted Logistic Regression,1,29,1,0.0,0.0,0.0,0.5357142857142857,0.07142857142857142
+September,Class-Weighted Logistic Regression,2,29,1,1.0,1.0,1.0,1.0,1.0
+September,Class-Weighted Logistic Regression,3,29,3,0.0,0.0,0.0,0.5,0.13445378151260504
+September,Dummy Classifier,1,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+September,Dummy Classifier,2,29,1,0.0,0.0,0.0,0.5,0.034482758620689655
+September,Dummy Classifier,3,29,3,0.0,0.0,0.0,0.5,0.10344827586206896
+September,RandomOverSampler Logistic Regression,1,29,1,0.0,0.0,0.0,0.5357142857142857,0.07142857142857142
+September,RandomOverSampler Logistic Regression,2,29,1,0.0,0.0,0.0,1.0,1.0
+September,RandomOverSampler Logistic Regression,3,29,3,0.0,0.0,0.0,0.43589743589743585,0.1202326468344775
